@@ -9,6 +9,12 @@ curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wir
 chmod +x wireguard-install.sh
 
 # Get Linux Kernel Headers
+# Should be as easy as sudo apt install linux-headers-amd64
+
+# or even better - sudo apt install linux-headers-generic
+# Installing the 'generic' package will also install the headers appropriate for your running kernel version but also will assure that updates to your kernel version will also trigger corresponding updates to the headers package.
+
+# Manual install headers
 wget https://ftp.debian.org/debian/pool/main/l/linux-signed-amd64/linux-headers-amd64_6.1.99-1_amd64.deb
 sudo dpkg -i linux-headers-amd64_6.1.99-1_amd64.deb
 
